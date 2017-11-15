@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Locadora.DTO
 {
-    class PessoaDTO
+    public class PessoaDTO
     {
         private int codigo;
         private String nome;

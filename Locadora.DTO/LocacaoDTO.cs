@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Locadora.DTO
 {
-    class LocacaoDTO
+    public class LocacaoDTO
     {
         private int codigoLocacao;
         private int codigoCliente;

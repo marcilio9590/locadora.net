@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroLocacaoVIEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroLocacaoVIEW.Designer.cs">
+      <DependentUpon>CadastroLocacaoVIEW.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTelaHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +59,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CadastroLocacaoVIEW.resx">
+      <DependentUpon>CadastroLocacaoVIEW.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTelaHome.resx">
       <DependentUpon>frmTelaHome.cs</DependentUpon>
     </EmbeddedResource>
