@@ -1,0 +1,23 @@
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Business.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Business.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Dados.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Entidades.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\bin\Debug\MySql.Data.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Dados.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Entidades.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\bin\Debug\MySql.Data.xml
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\obj\Debug\ProjetoFinal.Business.csprojResolveAssemblyReference.cache
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\obj\Debug\ProjetoFinal.Business.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Business\obj\Debug\ProjetoFinal.Business.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Business.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Business.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Dados.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Entidades.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\bin\Debug\MySql.Data.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Dados.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\bin\Debug\ProjetoFinal.Entidades.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\bin\Debug\MySql.Data.xml
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\obj\Debug\ProjetoFinal.Business.csprojResolveAssemblyReference.cache
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\obj\Debug\ProjetoFinal.Business.csproj.CoreCompileInputs.cache
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\obj\Debug\ProjetoFinal.Business.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Business\obj\Debug\ProjetoFinal.Business.pdb

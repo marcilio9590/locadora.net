@@ -1,0 +1,11 @@
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Entidades\bin\Debug\ProjetoFinal.Entidades.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Entidades\bin\Debug\ProjetoFinal.Entidades.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Entidades\obj\Debug\ProjetoFinal.Entidades.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Entidades\obj\Debug\ProjetoFinal.Entidades.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.Entidades\obj\Debug\ProjetoFinal.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Entidades\bin\Debug\ProjetoFinal.Entidades.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Entidades\bin\Debug\ProjetoFinal.Entidades.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Entidades\obj\Debug\ProjetoFinal.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Entidades\obj\Debug\ProjetoFinal.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Entidades\obj\Debug\ProjetoFinal.Entidades.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.Entidades\obj\Debug\ProjetoFinal.Entidades.pdb

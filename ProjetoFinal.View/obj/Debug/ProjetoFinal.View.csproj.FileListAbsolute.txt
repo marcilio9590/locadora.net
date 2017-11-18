@@ -1,0 +1,35 @@
+c:\Users\leonardo.r.farias\Documents\Visual Studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.View.exe.config
+c:\Users\leonardo.r.farias\Documents\Visual Studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.View.exe
+c:\Users\leonardo.r.farias\Documents\Visual Studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.View.pdb
+c:\Users\leonardo.r.farias\Documents\Visual Studio 2017\Projects\Projeto Final\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.csprojResolveAssemblyReference.cache
+c:\Users\leonardo.r.farias\Documents\Visual Studio 2017\Projects\Projeto Final\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Properties.Resources.resources
+c:\Users\leonardo.r.farias\Documents\Visual Studio 2017\Projects\Projeto Final\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.csproj.GenerateResource.Cache
+c:\Users\leonardo.r.farias\Documents\Visual Studio 2017\Projects\Projeto Final\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.exe
+c:\Users\leonardo.r.farias\Documents\Visual Studio 2017\Projects\Projeto Final\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.Business.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.Entidades.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.Dados.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\MySql.Data.dll
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.Business.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.Entidades.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\ProjetoFinal.Dados.pdb
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\bin\Debug\MySql.Data.xml
+C:\Users\leonardo.r.farias\documents\visual studio 2017\Projects\Projeto Final\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Form1.resources
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.View.exe.config
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.View.exe
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.View.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.Business.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.Entidades.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.Dados.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\MySql.Data.dll
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.Business.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.Entidades.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.Dados.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\MySql.Data.xml
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.csprojResolveAssemblyReference.cache
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Form1.resources
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Properties.Resources.resources
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.csproj.GenerateResource.Cache
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.csproj.CoreCompileInputs.cache
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.exe
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.pdb
