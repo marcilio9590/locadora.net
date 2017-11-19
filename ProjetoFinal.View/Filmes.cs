@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal.View
 {
-    public partial class Form1 : Form
+    public partial class Filmes : Form
     {
 
         private Int32 catchRowIndex;
-        public Form1()
+        public Filmes()
         {
             InitializeComponent();
         }
@@ -51,7 +51,7 @@ namespace ProjetoFinal.View
             try
             {
                 //Cria o objeto item e adiciona as informações dos campos de textos no novo objeto
-                Filmes it = new Filmes();
+                Entidades.Filmes it = new Entidades.Filmes();
                 it.codigo = txb_cod_item.Text;
                 it.descricao = txb_item_descricao.Text;
                 it.preco = Double.Parse(txb_item_preco.Text);

@@ -27,9 +27,10 @@ C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\Proje
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\ProjetoFinal.Dados.pdb
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\bin\Debug\MySql.Data.xml
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.csprojResolveAssemblyReference.cache
-C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Form1.resources
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Properties.Resources.resources
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.csproj.GenerateResource.Cache
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.csproj.CoreCompileInputs.cache
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.exe
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.pdb
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Filmes.resources
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Home.resources

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoFinal.View
 {
-    partial class Form1
+    partial class Filmes
     {
         /// <summary>
         /// Required designer variable.
