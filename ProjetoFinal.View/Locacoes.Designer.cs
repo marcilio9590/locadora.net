@@ -1,4 +1,6 @@
-﻿namespace ProjetoFinal.View
+﻿using ProjetoFinal.Entidades;
+
+namespace ProjetoFinal.View
 {
     partial class Locacoes
     {
@@ -6,6 +8,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
 
         /// <summary>
         /// Clean up any resources being used.
