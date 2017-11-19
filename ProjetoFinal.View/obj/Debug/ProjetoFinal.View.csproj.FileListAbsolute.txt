@@ -34,3 +34,4 @@ C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\Proje
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.pdb
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Filmes.resources
 C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Home.resources
+C:\Users\Marcilio\source\repos\Locadora-Filmes\ProjetoFinal.View\obj\Debug\ProjetoFinal.View.Locacao.resources
