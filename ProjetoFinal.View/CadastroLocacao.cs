@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal.View
 {
-    public partial class Locacao : Form
+    public partial class CadastroLocacao : Form
     {
-        public Locacao()
+        public CadastroLocacao()
         {
             InitializeComponent();
         }
+
     }
 }

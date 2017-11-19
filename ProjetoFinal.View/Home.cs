@@ -35,7 +35,7 @@ namespace ProjetoFinal.View
 
         private void locaçãoDevoluçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Locacao locacao = new Locacao();
+            CadastroLocacao locacao = new CadastroLocacao();
             locacao.Show();
         }
     }
