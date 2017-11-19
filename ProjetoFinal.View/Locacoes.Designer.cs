@@ -100,6 +100,7 @@ namespace ProjetoFinal.View
             this.Controls.Add(this.label1);
             this.Name = "Locacoes";
             this.Text = "Locações";
+            this.Load += new System.EventHandler(this.Locacoes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

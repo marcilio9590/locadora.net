@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FilmesDados.cs" />
+    <Compile Include="LocacaoDados.cs" />
     <Compile Include="ManageConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

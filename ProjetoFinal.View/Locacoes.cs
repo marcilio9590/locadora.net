@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinal.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,17 @@ namespace ProjetoFinal.View
         {
             CadastroLocacao cadLocacao = new CadastroLocacao();
             cadLocacao.Show();
+        }
+
+        private void Locacoes_Load(object sender, EventArgs e)
+        {
+            refreshGrid();
+        }
+
+        private void refreshGrid()
+        {
+            LocacaoBusiness locasaoService = new LocacaoBusiness();
+            this.dataGridView1.DataSource = locasaoService.GetItens();
         }
     }
 }

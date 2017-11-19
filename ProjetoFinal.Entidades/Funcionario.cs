@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoFinal.Entidades
 {
-    class Funcionario : Pessoa
+    public class Funcionario : Pessoa
     {
         public long codigoFuncionario { get; set; }
         public long rg { get; set; }
