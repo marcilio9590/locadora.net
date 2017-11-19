@@ -31,7 +31,7 @@ namespace ProjetoFinal.View
         /// </summary>
         private void RefreshDataGrid()
         {
-            ItemBusiness objIB = new ItemBusiness();
+            FilmesBusiness objIB = new FilmesBusiness();
             dataGridView1.DataSource = objIB.GetItens();
         }
 
@@ -57,7 +57,7 @@ namespace ProjetoFinal.View
                 it.preco = Double.Parse(txb_item_preco.Text);
 
                 //Cria um objeto de Item Bussines para chamar o método de inserção do item na camada de negócios
-                ItemBusiness ib = new ItemBusiness();
+                FilmesBusiness ib = new FilmesBusiness();
                 ib.SetItem(it);
 
                 //Limpa os campos de texto da tela

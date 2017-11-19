@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoFinal.Dados
 {
-    public class ItemDados
+    public class FilmesDados
     {
 
         private MySqlConnection con;

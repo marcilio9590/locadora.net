@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace ProjetoFinal.Business
 {
-    public class ItemBusiness
+    public class FilmesBusiness
     {
         public DataTable GetItens()
         {
-            ItemDados objID = new ItemDados();
+            FilmesDados objID = new FilmesDados();
 
             return objID.Consultar();
         }
 
         public void SetItem(Filmes item)
         {
-            ItemDados objID = new ItemDados();
+            FilmesDados objID = new FilmesDados();
 
             objID.Inserir(item);
         }
