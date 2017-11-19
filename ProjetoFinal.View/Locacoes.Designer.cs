@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSalvarEdicao = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,17 +64,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnSalvarEdicao
             // 
-            this.button2.Location = new System.Drawing.Point(578, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalvarEdicao.Enabled = false;
+            this.btnSalvarEdicao.Location = new System.Drawing.Point(578, 106);
+            this.btnSalvarEdicao.Name = "btnSalvarEdicao";
+            this.btnSalvarEdicao.Size = new System.Drawing.Size(187, 23);
+            this.btnSalvarEdicao.TabIndex = 4;
+            this.btnSalvarEdicao.Text = "Salvar Edição";
+            this.btnSalvarEdicao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalvarEdicao.UseVisualStyleBackColor = true;
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Location = new System.Drawing.Point(578, 135);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(187, 23);
@@ -88,7 +91,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 393);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSalvarEdicao);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -105,7 +108,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSalvarEdicao;
         private System.Windows.Forms.Button btnExcluir;
     }
 }
