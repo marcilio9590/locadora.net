@@ -16,5 +16,26 @@ namespace ProjetoFinal.View
         {
             InitializeComponent();
         }
+
+        private void filmesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filmes f1 = new Filmes();
+            f1.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locaçãoDevoluçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
