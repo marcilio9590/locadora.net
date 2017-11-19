@@ -144,7 +144,7 @@
             // 
             this.btnCadastrarLocacao.Location = new System.Drawing.Point(23, 221);
             this.btnCadastrarLocacao.Name = "btnCadastrarLocacao";
-            this.btnCadastrarLocacao.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarLocacao.Size = new System.Drawing.Size(148, 23);
             this.btnCadastrarLocacao.TabIndex = 11;
             this.btnCadastrarLocacao.Text = "Cadastrar";
             this.btnCadastrarLocacao.UseMnemonic = false;
