@@ -14,6 +14,8 @@ namespace ProjetoFinal.View
     {
         Business.ClienteBusiness clienteBusiness = new Business.ClienteBusiness();
 
+        Business.FuncionarioBusiness funcionarioBusiness = new Business.FuncionarioBusiness();
+
         public CadastroLocacao()
         {
             InitializeComponent();
@@ -30,6 +32,29 @@ namespace ProjetoFinal.View
                 {
                     tbCodCliente.Enabled = false;
                     tbNomeCliente.Text = c.nome;
+                }
+                else
+                {
+                    MessageBox.Show("Código inválido.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pesquisarFuncionario(object sender, EventArgs e)
+        {
+            Entidades.Funcionario c = new Entidades.Funcionario();
+            String codigo = tbCodFuncionario.Text;
+            try
+            {
+                c = funcionarioBusiness.buscarFuncionario(codigo);
+                if (c != null)
+                {
+                    tbCodFuncionario.Enabled = false;
+                    tbNomeFuncionario.Text = c.nome;
                 }
                 else
                 {

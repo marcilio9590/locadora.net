@@ -8,26 +8,26 @@ using System.Threading.Tasks;
 
 namespace ProjetoFinal.Dados
 {
-    public class ClienteDados
+    public class FuncionarioDados
     {
         private MySqlConnection con;
 
-        public Cliente buscarCliente(String codigo)
+        public Funcionario buscarFuncionario(String codigo)
         {
             con = ManageConnection.GetInstance().GetConection();
-            String query = "SELECT * FROM clientes WHERE cod_cliente = ?codCliente";
+            String query = "SELECT * FROM funcionarios WHERE cod_funcionario = ?codFuncionario";
             try
             {
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.Parameters.AddWithValue("?codCliente", codigo);
+                cmd.Parameters.AddWithValue("?codFuncionario", codigo);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-                Cliente c = null;
+                Funcionario c = null;
                 if (dataReader.Read())
                 {
-                    c = new Cliente();
+                    c = new Funcionario();
                     c.nome = dataReader["nome"].ToString();
-                    c.codigoCliente = long.Parse(dataReader["cod_cliente"].ToString());
+                    c.codigoFuncionario = long.Parse(dataReader["cod_funcionario"].ToString());
                 }
                 return c;
             }
