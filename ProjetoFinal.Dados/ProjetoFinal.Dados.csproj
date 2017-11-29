@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteDados.cs" />
     <Compile Include="FilmesDados.cs" />
     <Compile Include="LocacaoDados.cs" />
     <Compile Include="ManageConnection.cs" />

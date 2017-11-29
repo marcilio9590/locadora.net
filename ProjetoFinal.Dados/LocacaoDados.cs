@@ -14,7 +14,7 @@ namespace ProjetoFinal.Dados
 
         private MySqlConnection con;
 
-        public void Inserir(Locacao item )
+        public void Inserir(Locacao item)
         {
             con = ManageConnection.GetInstance().GetConection();
             String query = "INSERT INTO locacoes (cod_cliente,cod_funcionario,data,total,status) VALUES";
@@ -23,9 +23,9 @@ namespace ProjetoFinal.Dados
             {
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.Parameters.AddWithValue("?codigocliente", item.cliente.codigoCliente); 
-                cmd.Parameters.AddWithValue("?codigofuncionario", item.funcionario.codigoFuncionario); 
-                cmd.Parameters.AddWithValue("?data", item.data); 
+                cmd.Parameters.AddWithValue("?codigocliente", item.cliente.codigoCliente);
+                cmd.Parameters.AddWithValue("?codigofuncionario", item.funcionario.codigoFuncionario);
+                cmd.Parameters.AddWithValue("?data", item.data);
                 cmd.Parameters.AddWithValue("?total", item.total);
                 cmd.Parameters.AddWithValue("?status", item.status);
                 cmd.ExecuteNonQuery();

@@ -121,6 +121,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pesquisarCliente);
             // 
             // pictureBox2
             // 
@@ -142,6 +143,7 @@
             // 
             // btnCadastrarLocacao
             // 
+            this.btnCadastrarLocacao.Enabled = false;
             this.btnCadastrarLocacao.Location = new System.Drawing.Point(23, 221);
             this.btnCadastrarLocacao.Name = "btnCadastrarLocacao";
             this.btnCadastrarLocacao.Size = new System.Drawing.Size(148, 23);
