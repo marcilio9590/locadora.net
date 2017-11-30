@@ -28,21 +28,21 @@ namespace ProjetoFinal.View
 
         private void montarTitulo()
         {
-            this.tituloPagina.Text += " " + this.codigoLocacao;
+            this.tituloPagina.Text += " - " + this.codigoLocacao;
         }
 
         private void refreshGrid()
         {
             LocacaoBusiness locasaoService = new LocacaoBusiness();
             this.dataGridView2.DataSource = locasaoService.getFilmesLocacao(codigoLocacao);
-            //DataGridViewButtonColumn button = new DataGridViewButtonColumn();
-            //{
-            //    button.Name = "btnVerFilmes";
-            //    button.HeaderText = "Filmes";
-            //    button.Text = "Gerenciar Filmes";
-            //    button.UseColumnTextForButtonValue = true;
-            //    this.dataGridView2.Columns.Add(button);
-            //}
+            DataGridViewButtonColumn btnExcluir = new DataGridViewButtonColumn();
+            {
+                btnExcluir.Name = "btnExcluirFilme";
+                btnExcluir.HeaderText = "Remover";
+                btnExcluir.Text = "Remover Filme";
+                btnExcluir.UseColumnTextForButtonValue = true;
+                this.dataGridView2.Columns.Add(btnExcluir);
+            }
 
         }
     }
