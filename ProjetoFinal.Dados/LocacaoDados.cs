@@ -36,50 +36,6 @@ namespace ProjetoFinal.Dados
                 con.Close();
             }
         }
-
-        public void Atualizar(Locacao item)
-        {
-            con = ManageConnection.GetInstance().GetConection();
-            String query = "UPDATE locacoes SET cod_cliente = ?codigocliente, cod_funcionario = ?codigofuncionario," +
-                " total = ?total";
-            query += " WHERE cod_locacao = ?codigolocacao";
-            try
-            {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.Parameters.AddWithValue("?codigocliente", item.cliente.codigoCliente);
-                cmd.Parameters.AddWithValue("?codigofuncionario", item.funcionario.codigoFuncionario);
-                cmd.Parameters.AddWithValue("?total", item.total);
-                cmd.Parameters.AddWithValue("?codigolocacao", item.codigoLocacao);
-
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
-
-        public void Remover(String itemcodigo, Int32 itemid)
-        {
-            con = ManageConnection.GetInstance().GetConection();
-            String query = "DELETE FROM filmes ";
-            query += "WHERE cod_filme = ?itemcodigo";
-            try
-            {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.Parameters.AddWithValue("?itemcodigo", itemcodigo);
-                cmd.ExecuteNonQuery();
-                cmd.Dispose();
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
-
         
         public DataTable Consultar()
         {
@@ -121,6 +77,44 @@ namespace ProjetoFinal.Dados
             catch (Exception e)
             {
                 throw e;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void excluirFilmeLocacao(String codigoLocacao, String codigoItem, String codigoFilme)
+        {
+            con = ManageConnection.GetInstance().GetConection();
+            con.Open();
+
+            MySqlTransaction myTrans;
+            myTrans = con.BeginTransaction(IsolationLevel.ReadCommitted);
+
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.Transaction = myTrans;
+
+            try
+            {
+                cmd.CommandText = "DELETE from itens_locacao WHERE codigo = ?codigo";
+                cmd.Parameters.AddWithValue("?codigo", codigoItem);
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "UPDATE filmes set status = 1 where cod_filme = ?codigoFilme";
+                cmd.Parameters.AddWithValue("?codigoFilme", codigoFilme);
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "UPDATE locacoes l inner join filmes f on ?codigoFilme = f.cod_filme set l.total = l.total - f.preco where l.cod_locacao =  ?codigolocacao";
+                cmd.Parameters.AddWithValue("?cod_filme", codigoFilme);
+                cmd.Parameters.AddWithValue("?codigolocacao", codigoLocacao);
+                cmd.ExecuteNonQuery();
+                myTrans.Commit();
+                cmd.Dispose();
+            }
+            catch (Exception e)
+            {
+                myTrans.Rollback();
+                Console.WriteLine(e.ToString());
             }
             finally
             {

@@ -38,5 +38,18 @@ namespace ProjetoFinal.Business
                 throw e;
             }
         }
+
+        public void excluirFilmeLocacao(String codigoLocacao, String codigoItem, String codigoFilme)
+        {
+            LocacaoDados objID = new LocacaoDados();
+            try
+            {
+                objID.excluirFilmeLocacao(codigoLocacao, codigoItem, codigoFilme);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

@@ -55,7 +55,7 @@ namespace ProjetoFinal.View
                     FilmesLocacao filmesView = new FilmesLocacao();
                     filmesView.codigoLocacao = codigo;
                     filmesView.Show();
-    }
+                }
             }
         }
     }
