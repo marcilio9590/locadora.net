@@ -13,6 +13,7 @@ namespace ProjetoFinal.View
 {
     public partial class Locacoes : Form
     {
+
         public Locacoes()
         {
             InitializeComponent();
@@ -33,6 +34,29 @@ namespace ProjetoFinal.View
         {
             LocacaoBusiness locasaoService = new LocacaoBusiness();
             this.dataGridView1.DataSource = locasaoService.GetItens();
+            DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+            {
+                button.Name = "btnVerFilmes";
+                button.HeaderText = "Filmes";
+                button.Text = "Gerenciar Filmes";
+                button.UseColumnTextForButtonValue = true;
+                this.dataGridView1.Columns.Add(button);
+            }
+
+        }
+
+        private void cell_click(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                String codigo = this.dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                if (codigo.Length != 0)
+                {
+                    FilmesLocacao filmesView = new FilmesLocacao();
+                    filmesView.codigoLocacao = codigo;
+                    filmesView.Show();
+    }
+            }
         }
     }
 }

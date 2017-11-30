@@ -51,6 +51,12 @@
     <Compile Include="Filmes.Designer.cs">
       <DependentUpon>Filmes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilmesLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmesLocacao.Designer.cs">
+      <DependentUpon>FilmesLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Filmes.resx">
       <DependentUpon>Filmes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmesLocacao.resx">
+      <DependentUpon>FilmesLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

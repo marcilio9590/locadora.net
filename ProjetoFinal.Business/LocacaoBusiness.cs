@@ -25,5 +25,18 @@ namespace ProjetoFinal.Business
 
             objID.Inserir(item);
         }
+
+        public DataTable getFilmesLocacao(String codigo)
+        {
+            LocacaoDados objID = new LocacaoDados();
+            try
+            {
+                return objID.ConsultarFilmes(codigo);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

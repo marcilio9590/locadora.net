@@ -80,6 +80,7 @@ namespace ProjetoFinal.Dados
             }
         }
 
+        
         public DataTable Consultar()
         {
             con = ManageConnection.GetInstance().GetConection();
@@ -102,10 +103,30 @@ namespace ProjetoFinal.Dados
             }
         }
 
-        public Filmes Consultar(int id)
+        public DataTable ConsultarFilmes(String id)
         {
-            Filmes i = new Filmes();
-            return i;
+            con = ManageConnection.GetInstance().GetConection();
+            String query = "SELECT il.cod_locacao, il.codigo, f.cod_filme, f.nome, f.preco " +
+                "FROM filmes f inner join itens_locacao il on f.cod_filme = il.cod_filme where il.cod_locacao = ?codigo";
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("?codigo", id);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dtItens = new DataTable();
+                da.Fill(dtItens);
+                return dtItens;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                con.Close();
+            }
+
         }
     }
 }
