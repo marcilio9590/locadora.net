@@ -40,7 +40,7 @@ namespace ProjetoFinal.Dados
         public DataTable Consultar()
         {
             con = ManageConnection.GetInstance().GetConection();
-            String query = "Select l.cod_locacao, c.nome, l.data,l.status,l.total from locacoes l inner join clientes c on  l.cod_cliente = c.cod_cliente;";
+            String query = "Select l.cod_locacao, c.cod_cliente, c.nome, l.data,l.status,l.total from locacoes l inner join clientes c on  l.cod_cliente = c.cod_cliente;";
 
             try
             {
