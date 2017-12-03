@@ -37,6 +37,7 @@ namespace ProjetoFinal.View
                 {
                     tbCodCliente.Enabled = false;
                     tbNomeCliente.Text = c.nome;
+                    ativarBotaoCadastrar();
                 }
                 else
                 {
@@ -60,6 +61,7 @@ namespace ProjetoFinal.View
                 {
                     tbCodFuncionario.Enabled = false;
                     tbNomeFuncionario.Text = c.nome;
+                    ativarBotaoCadastrar();
                 }
                 else
                 {
@@ -93,6 +95,7 @@ namespace ProjetoFinal.View
                         source.DataSource = this.filmesAdicionados;
                         this.gridFilmes.DataSource = source;
                         desativarColunasGridFilmes();
+                        ativarBotaoCadastrar();
                     }
                 }
                 else
@@ -103,6 +106,16 @@ namespace ProjetoFinal.View
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ativarBotaoCadastrar()
+        {
+            if (this.tbCodCliente.Text != String.Empty && this.tbNomeCliente.Text != String.Empty
+                && this.tbCodFuncionario.Text != String.Empty && this.tbCodFuncionario.Text != String.Empty
+                && this.filmesAdicionados.Any())
+            {
+                this.btnCadastrarLocacao.Enabled = true;
             }
         }
 
