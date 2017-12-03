@@ -11,7 +11,7 @@ namespace ProjetoFinal.Entidades
         public string codigo { get; set; }
         public string descricao { get; set; }
         public String genero { get; set; }
-        public int status { get; set; }
+        public String status { get; set; }
         public double preco { get; set; }
 
     }

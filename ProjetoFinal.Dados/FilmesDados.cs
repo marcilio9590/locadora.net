@@ -101,10 +101,36 @@ namespace ProjetoFinal.Dados
             }
         }
 
-        public Filmes Consultar(int id)
+        public Filmes buscarFilme(String codigo)
         {
-            Filmes i = new Filmes();
-            return i;
+            con = ManageConnection.GetInstance().GetConection();
+            String query = "SELECT * FROM filmes WHERE cod_filme = ?codFilme";
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("?codFilme", codigo);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                Filmes f = null;
+                if (dataReader.Read())
+                {
+                    f = new Filmes();
+                    f.descricao = dataReader["nome"].ToString();
+                    f.codigo = dataReader["cod_filme"].ToString();
+                    f.preco = Double.Parse(dataReader["preco"].ToString());
+                    f.status = dataReader["status"].ToString() == "1" ? "Disponível" : "Indiponível";
+                    f.genero = dataReader["genero"].ToString();
+                }
+                return f;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

@@ -38,7 +38,7 @@
             this.tbCodFilme = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridFilmes = new System.Windows.Forms.DataGridView();
             this.btnCadastrarLocacao = new System.Windows.Forms.Button();
             this.tbNomeCliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridFilmes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,13 +134,13 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pesquisarFuncionario);
             // 
-            // dataGridView1
+            // gridFilmes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(491, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(279, 172);
-            this.dataGridView1.TabIndex = 10;
+            this.gridFilmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridFilmes.Location = new System.Drawing.Point(491, 72);
+            this.gridFilmes.Name = "gridFilmes";
+            this.gridFilmes.Size = new System.Drawing.Size(279, 172);
+            this.gridFilmes.TabIndex = 10;
             // 
             // btnCadastrarLocacao
             // 
@@ -200,6 +200,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.adicionarFilme);
             // 
             // CadastroLocacao
             // 
@@ -212,7 +213,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbNomeCliente);
             this.Controls.Add(this.btnCadastrarLocacao);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridFilmes);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbCodFilme);
@@ -226,7 +227,7 @@
             this.Text = "Nova Locação";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridFilmes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -244,7 +245,7 @@
         private System.Windows.Forms.TextBox tbCodFilme;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridFilmes;
         private System.Windows.Forms.Button btnCadastrarLocacao;
         private System.Windows.Forms.TextBox tbNomeCliente;
         private System.Windows.Forms.Label label5;

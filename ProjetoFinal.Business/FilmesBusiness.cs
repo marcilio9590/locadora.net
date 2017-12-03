@@ -24,5 +24,22 @@ namespace ProjetoFinal.Business
 
             objID.Inserir(item);
         }
+
+        public Filmes buscarFilme(String codigo)
+        {
+            Filmes f = null;
+            FilmesDados dao = new FilmesDados();
+
+            try
+            {
+                f = dao.buscarFilme(codigo);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return f;
+        }
     }
 }

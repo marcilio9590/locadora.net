@@ -3,6 +3,7 @@ using ProjetoFinal.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,6 @@ namespace ProjetoFinal.Dados
             {
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand(query, con);
-
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dtItens = new DataTable();
                 da.Fill(dtItens);

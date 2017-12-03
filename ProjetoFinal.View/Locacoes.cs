@@ -37,11 +37,11 @@ namespace ProjetoFinal.View
         private void refreshGrid()
         {
             this.dataGridView1.DataSource = locasaoService.GetItens();
-            AjustarGrid();
-
+            ajustarGrid();
+            percorrerResultadoGridView();
         }
 
-        private void AjustarGrid()
+        private void ajustarGrid()
         {
             DataGridViewButtonColumn button = new DataGridViewButtonColumn();
             {
@@ -56,17 +56,18 @@ namespace ProjetoFinal.View
             this.dataGridView1.Columns[3].ReadOnly = true;
             this.dataGridView1.Columns[4].ReadOnly = true;
             this.dataGridView1.Columns[5].ReadOnly = true;
+
         }
 
         private void cell_click(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 6)
             {
-                ChamarViewFilmesLocacao(e);
+                chamarViewFilmesLocacao(e);
             }
         }
 
-        private void ChamarViewFilmesLocacao(DataGridViewCellEventArgs e)
+        private void chamarViewFilmesLocacao(DataGridViewCellEventArgs e)
         {
             String codigo = this.dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             if (codigo.Length != 0)
@@ -84,11 +85,11 @@ namespace ProjetoFinal.View
        
             if(e.ColumnIndex == 1)
             {
-                BuscarPreencherCliente(e, value);
+                buscarPreencherCliente(e, value);
             }
         }
 
-        private void BuscarPreencherCliente(DataGridViewCellEventArgs e, string value)
+        private void buscarPreencherCliente(DataGridViewCellEventArgs e, string value)
         {
             Cliente c = this.clienteBusiness.buscarCliente(value);
             if (c != null)
@@ -99,6 +100,29 @@ namespace ProjetoFinal.View
             {
                 this.dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = 0;
                 this.dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = "";
+            }
+        }
+
+        private void percorrerResultadoGridView()
+        {
+            for (int i = 0; i < this.dataGridView1.RowCount; i++)
+            {
+                preencherColunaStatus(this.dataGridView1.Rows[i]);
+            }
+        }
+
+        private void preencherColunaStatus(DataGridViewRow linha)
+        {
+            if(linha.Cells[4].Value != null)
+            {
+                if(linha.Cells[4].Value.ToString() == "0")
+                {
+                    linha.Cells[4].ToolTipText = "Em Aberto";
+                }
+                else
+                {
+                    linha.Cells[4].ToolTipText = "Entregue";
+                }
             }
         }
     }
