@@ -23,7 +23,7 @@ namespace ProjetoFinal.Business
         {
             LocacaoDados objID = new LocacaoDados();
 
-            objID.Inserir(item);
+            objID.InserirLocacao(item);
         }
 
         public DataTable getFilmesLocacao(String codigo)
@@ -45,6 +45,19 @@ namespace ProjetoFinal.Business
             try
             {
                 objID.excluirFilmeLocacao(codigoLocacao, codigoItem, codigoFilme);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public void cadastrarLocacao(Locacao locacao)
+        {
+            LocacaoDados objID = new LocacaoDados();
+            try
+            {
+                objID.InserirLocacao(locacao);
             }
             catch (Exception e)
             {

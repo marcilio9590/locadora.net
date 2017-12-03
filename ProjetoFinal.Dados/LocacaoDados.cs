@@ -15,7 +15,9 @@ namespace ProjetoFinal.Dados
 
         private MySqlConnection con;
 
-        public void Inserir(Locacao item)
+        FilmesDados filmesDados = new FilmesDados();
+
+        public void InserirLocacao(Locacao item)
         {
             con = ManageConnection.GetInstance().GetConection();
             String query = "INSERT INTO locacoes (cod_cliente,cod_funcionario,data,total,status) VALUES";
@@ -28,16 +30,76 @@ namespace ProjetoFinal.Dados
                 cmd.Parameters.AddWithValue("?codigofuncionario", item.funcionario.codigoFuncionario);
                 cmd.Parameters.AddWithValue("?data", item.data);
                 cmd.Parameters.AddWithValue("?total", item.total);
-                cmd.Parameters.AddWithValue("?status", item.status);
+                cmd.Parameters.AddWithValue("?status", 0);
                 cmd.ExecuteNonQuery();
+                long id = cmd.LastInsertedId;
                 cmd.Dispose();
+                inserirFilmesLocacao(id,item.filmes);
             }
             finally
             {
                 con.Close();
             }
         }
-        
+
+        private void inserirFilmesLocacao(long id, List<Filmes> filmes)
+        {
+            con = ManageConnection.GetInstance().GetConection();
+            MySqlCommand cmd = null;
+            try
+            {
+                con.Open();
+                foreach (Filmes item in filmes)
+                {
+                    String query = "INSERT INTO itens_locacao (cod_locacao,cod_filme) VALUES (?codigoLocacao,?codigoFilme)";
+                    cmd = new MySqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("?codigoLocacao", id);
+                    cmd.Parameters.AddWithValue("?codigoFilme", item.codigo);
+                    cmd.ExecuteNonQuery();
+                    atualizarStatusFilme(item);
+                }
+                cmd.Dispose();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            } finally
+            {
+                con.Close();
+            }
+        }
+
+        private void atualizarStatusFilme(Filmes item)
+        {
+            filmesDados.atualizarStatusFilmes(item);
+        }
+
+        private long recuperarIdInserido()
+        {
+            long id = 0;
+            con = ManageConnection.GetInstance().GetConection();
+            String query = "SELECT LAST_INSERT_ID()";
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                if (dataReader.Read())
+                {
+                    id = long.Parse(dataReader["LAST_INSERT_ID()"].ToString());
+                }
+                return id;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public DataTable Consultar()
         {
             con = ManageConnection.GetInstance().GetConection();

@@ -15,5 +15,12 @@ namespace ProjetoFinal.Entidades
         public Cliente cliente { get; set; }
         public Funcionario funcionario { get; set; }
         public List<Filmes> filmes { get; set; }
+
+        public Locacao()
+        {
+            this.cliente = new Cliente();
+            this.funcionario = new Funcionario();
+            this.filmes = new List<Filmes>(0);
+        }
     }
 }

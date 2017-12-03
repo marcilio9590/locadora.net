@@ -19,6 +19,8 @@ namespace ProjetoFinal.View
 
         Business.FilmesBusiness filmesBusiness = new Business.FilmesBusiness();
 
+        Business.LocacaoBusiness locacaoBusiness = new Business.LocacaoBusiness();
+
         List<Entidades.Filmes> filmesAdicionados = new List<Entidades.Filmes>(0);
 
         public CadastroLocacao()
@@ -163,6 +165,14 @@ namespace ProjetoFinal.View
             locacao.total = Double.Parse(this.tbTotal.Text);
             locacao.data = new TimeSpan();
             locacao.filmes = this.filmesAdicionados;
+            try
+            {
+                this.locacaoBusiness.cadastrarLocacao(locacao);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
         }
     }
 }

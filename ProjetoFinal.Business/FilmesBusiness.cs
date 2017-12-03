@@ -41,5 +41,20 @@ namespace ProjetoFinal.Business
 
             return f;
         }
+
+        public void atualizarStatusFilmes(Filmes filme)
+        {
+            FilmesDados dao = new FilmesDados();
+
+            try
+            {
+                dao.atualizarStatusFilmes(filme);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }

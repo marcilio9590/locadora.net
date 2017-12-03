@@ -132,5 +132,27 @@ namespace ProjetoFinal.Dados
                 con.Close();
             }
         }
+
+        public void atualizarStatusFilmes(Filmes filme)
+        {
+            con = ManageConnection.GetInstance().GetConection();
+            String query = "UPDATE filmes SET status = 0 WHERE cod_filme = ?codFilme";
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("?codFilme", filme.codigo);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 }
