@@ -45,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tbNomeFuncionario = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tbTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridFilmes)).BeginInit();
@@ -152,6 +153,7 @@
             this.btnCadastrarLocacao.Text = "Cadastrar";
             this.btnCadastrarLocacao.UseMnemonic = false;
             this.btnCadastrarLocacao.UseVisualStyleBackColor = true;
+            this.btnCadastrarLocacao.Click += new System.EventHandler(this.cadastrarLocacao);
             // 
             // tbNomeCliente
             // 
@@ -202,11 +204,20 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.adicionarFilme);
             // 
+            // tbTotal
+            // 
+            this.tbTotal.Enabled = false;
+            this.tbTotal.Location = new System.Drawing.Point(220, 223);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(202, 20);
+            this.tbTotal.TabIndex = 20;
+            // 
             // CadastroLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 393);
+            this.Controls.Add(this.tbTotal);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbNomeFuncionario);
@@ -252,5 +263,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbNomeFuncionario;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox tbTotal;
     }
 }

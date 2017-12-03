@@ -96,6 +96,7 @@ namespace ProjetoFinal.View
                         this.gridFilmes.DataSource = source;
                         desativarColunasGridFilmes();
                         ativarBotaoCadastrar();
+                        atualizarTotal(f);
                     }
                 }
                 else
@@ -106,6 +107,19 @@ namespace ProjetoFinal.View
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void atualizarTotal(Entidades.Filmes f)
+        {
+            if(this.tbTotal.Text != String.Empty)
+            {
+                Double result = Double.Parse(this.tbTotal.Text) + f.preco;
+                this.tbTotal.Text = result.ToString();
+            }
+            else
+            {
+                this.tbTotal.Text = f.preco.ToString();
             }
         }
 
@@ -139,6 +153,16 @@ namespace ProjetoFinal.View
             this.gridFilmes.Columns[2].ReadOnly = true;
             this.gridFilmes.Columns[3].ReadOnly = true;
             this.gridFilmes.Columns[4].ReadOnly = true;
+        }
+
+        private void cadastrarLocacao(object sender, EventArgs e)
+        {
+            Entidades.Locacao locacao = new Locacao();
+            locacao.cliente.codigoCliente = long.Parse(this.tbCodCliente.Text);
+            locacao.funcionario.codigoFuncionario = long.Parse(this.tbCodFuncionario.Text);
+            locacao.total = Double.Parse(this.tbTotal.Text);
+            locacao.data = new TimeSpan();
+            locacao.filmes = this.filmesAdicionados;
         }
     }
 }
