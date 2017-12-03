@@ -91,14 +91,22 @@ namespace ProjetoFinal.View
                     }
                     else
                     {
-                        var source = new BindingSource();
-                        tbCodFilme.Text = "";
-                        this.filmesAdicionados.Add(f);
-                        source.DataSource = this.filmesAdicionados;
-                        this.gridFilmes.DataSource = source;
-                        desativarColunasGridFilmes();
-                        ativarBotaoCadastrar();
-                        atualizarTotal(f);
+                        if (f.status == "Disponível")
+                        {
+                            var source = new BindingSource();
+                            tbCodFilme.Text = "";
+                            this.filmesAdicionados.Add(f);
+                            source.DataSource = this.filmesAdicionados;
+                            this.gridFilmes.DataSource = source;
+                            desativarColunasGridFilmes();
+                            ativarBotaoCadastrar();
+                            atualizarTotal(f);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Este Filme já encontra-se alugado.");
+                        }
                     }
                 }
                 else
