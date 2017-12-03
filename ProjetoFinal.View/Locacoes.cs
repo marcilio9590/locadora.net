@@ -25,7 +25,7 @@ namespace ProjetoFinal.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CadastroLocacao cadLocacao = new CadastroLocacao();
+            CadastroLocacao cadLocacao = new CadastroLocacao(this);
             cadLocacao.Show();
         }
 
@@ -34,7 +34,7 @@ namespace ProjetoFinal.View
             refreshGrid();
         }
 
-        private void refreshGrid()
+        public void refreshGrid()
         {
             this.dataGridView1.DataSource = locasaoService.GetItens();
             ajustarGrid();

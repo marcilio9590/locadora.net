@@ -9,7 +9,7 @@ namespace ProjetoFinal.Entidades
     public class Locacao
     {
         public long codigoLocacao { get; set; }
-        public TimeSpan data { get; set; }
+        public DateTime data { get; set; }
         public double total { get; set; }
         public long status { get; set; }
         public Cliente cliente { get; set; }

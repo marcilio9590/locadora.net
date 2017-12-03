@@ -23,9 +23,12 @@ namespace ProjetoFinal.View
 
         List<Entidades.Filmes> filmesAdicionados = new List<Entidades.Filmes>(0);
 
-        public CadastroLocacao()
+        Locacoes locacoes;
+
+        public CadastroLocacao(Locacoes loc)
         {
             InitializeComponent();
+            locacoes = loc;
         }
 
         private void pesquisarCliente(object sender, EventArgs e)
@@ -171,11 +174,14 @@ namespace ProjetoFinal.View
             locacao.cliente.codigoCliente = long.Parse(this.tbCodCliente.Text);
             locacao.funcionario.codigoFuncionario = long.Parse(this.tbCodFuncionario.Text);
             locacao.total = Double.Parse(this.tbTotal.Text);
-            locacao.data = new TimeSpan();
+            locacao.data = DateTime.Now;
             locacao.filmes = this.filmesAdicionados;
             try
             {
                 this.locacaoBusiness.cadastrarLocacao(locacao);
+                MessageBox.Show("Locação Cadastrada com sucesso.");
+                locacoes.refreshGrid();
+                this.Close();
             }
             catch (Exception exception)
             {
