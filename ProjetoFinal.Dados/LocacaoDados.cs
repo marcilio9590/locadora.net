@@ -200,8 +200,10 @@ namespace ProjetoFinal.Dados
             try
             {
 
-                foreach (String codigo in lista)
+                for (int i = 0; i < lista.Count; i++)
                 {
+                    String codigo = lista[i];
+
                     cmd.CommandText = "UPDATE filmes AS a INNER JOIN itens_locacao AS b ON a.cod_filme = b.cod_filme SET a.status = 1 WHERE  b.cod_locacao = ?codigo";
                     cmd.Parameters.AddWithValue("?codigo", codigo);
                     cmd.ExecuteNonQuery();
@@ -211,12 +213,11 @@ namespace ProjetoFinal.Dados
                     cmd.CommandText = "DELETE FROM locacoes WHERE cod_locacao = ?codigo3";
                     cmd.Parameters.AddWithValue("?codigo3", codigo);
                     cmd.ExecuteNonQuery();
-                    myTrans.Commit();
-                    cmd.Dispose();
+                    cmd.Parameters.Clear();
 
                 }
-
-
+                    myTrans.Commit();
+                    cmd.Dispose();
             }
             catch (Exception e)
             {
