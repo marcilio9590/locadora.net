@@ -43,15 +43,19 @@ namespace ProjetoFinal.View
 
         private void ajustarGrid()
         {
-            DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+            if (!this.dataGridView1.Columns.Contains("btnVerFilmes"))
             {
-                button.Name = "btnVerFilmes";
-                button.HeaderText = "Filmes";
-                button.Text = "Gerenciar Filmes";
-                button.UseColumnTextForButtonValue = true;
-                this.dataGridView1.Columns.Add(button);
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                {
+                    button.Name = "btnVerFilmes";
+                    button.HeaderText = "Filmes";
+                    button.Text = "Gerenciar Filmes";
+                    button.UseColumnTextForButtonValue = true;
+                    this.dataGridView1.Columns.Add(button);
+                }
             }
             this.dataGridView1.Columns[0].ReadOnly = true;
+            this.dataGridView1.Columns[1].ReadOnly = true;
             this.dataGridView1.Columns[2].ReadOnly = true;
             this.dataGridView1.Columns[3].ReadOnly = true;
             this.dataGridView1.Columns[4].ReadOnly = true;
@@ -72,7 +76,7 @@ namespace ProjetoFinal.View
             String codigo = this.dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             if (codigo.Length != 0)
             {
-                FilmesLocacao filmesView = new FilmesLocacao();
+                FilmesLocacao filmesView = new FilmesLocacao(this);
                 filmesView.codigoLocacao = codigo;
                 filmesView.Show();
             }

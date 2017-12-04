@@ -15,9 +15,15 @@ namespace ProjetoFinal.View
     {
         public String codigoLocacao { get; set; }
 
-        public FilmesLocacao()
+        LocacaoBusiness locacaoBusiness = new LocacaoBusiness();
+
+        Locacoes locacaoView;
+
+
+        public FilmesLocacao(Locacoes loc)
         {
             InitializeComponent();
+            locacaoView = loc;
         }
 
         private void FilmesLocacao_Load(object sender, EventArgs e)
@@ -43,8 +49,7 @@ namespace ProjetoFinal.View
 
         private void refreshGrid()
         {
-            LocacaoBusiness locasaoService = new LocacaoBusiness();
-            this.dataGridView2.DataSource = locasaoService.getFilmesLocacao(codigoLocacao);
+            this.dataGridView2.DataSource = locacaoBusiness.getFilmesLocacao(codigoLocacao);
             DataGridViewButtonColumn btnExcluir = new DataGridViewButtonColumn();
             {
                 btnExcluir.Name = "btnExcluirFilme";
@@ -60,16 +65,28 @@ namespace ProjetoFinal.View
         {
             if (e.ColumnIndex == 5)
             {
-                //if(this.dataGridView2.Rows.Count == 2)
-                //{
-                //    DialogResult confirm = MessageBox.Show("A locação será excluida. Deseja Continuar?", "Exclusão da Locação", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-                //    if (confirm.ToString().ToUpper() == "YES")
-                //    {
-                //        // Chamar exclusao de locacao
-                //    }
-                //}
-                //else
-                //{
+                if(this.dataGridView2.Rows.Count == 2)
+                {
+                    DialogResult confirm = MessageBox.Show("A locação será excluida. Deseja Continuar?", "Exclusão da Locação", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                    if (confirm.ToString().ToUpper() == "YES")
+                    {
+                        List<String> lista = new List<string>(0);
+                        lista.Add(this.codigoLocacao);
+                        try
+                        {
+                            this.locacaoBusiness.excluirLocacao(lista);
+                            MessageBox.Show("Locação Excluida");
+                            this.locacaoView.refreshGrid();
+                            this.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                    }
+                }
+                else
+                {
                     String codigoLocacao = this.dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
                     String codigoItem = this.dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
                     String codigoFilme = this.dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -78,16 +95,15 @@ namespace ProjetoFinal.View
                     {
                         excluirFilmeLocacao(codigoLocacao, codigoItem, codigoFilme);
                     }
-                //}
+                }
             }
         }
 
         public void excluirFilmeLocacao(String codigoLocacao, String codigoItem, String codigoFilme)
         {
-            LocacaoBusiness locasaoService = new LocacaoBusiness();
             try
             {
-                locasaoService.excluirFilmeLocacao(codigoLocacao, codigoItem, codigoFilme);
+                locacaoBusiness.excluirFilmeLocacao(codigoLocacao, codigoItem, codigoFilme);
                 InitializeComponent();
             }
             catch (Exception e)

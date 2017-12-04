@@ -34,7 +34,6 @@ namespace ProjetoFinal.View
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnSalvarEdicao = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -70,21 +69,10 @@ namespace ProjetoFinal.View
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnSalvarEdicao
-            // 
-            this.btnSalvarEdicao.Enabled = false;
-            this.btnSalvarEdicao.Location = new System.Drawing.Point(578, 106);
-            this.btnSalvarEdicao.Name = "btnSalvarEdicao";
-            this.btnSalvarEdicao.Size = new System.Drawing.Size(187, 23);
-            this.btnSalvarEdicao.TabIndex = 4;
-            this.btnSalvarEdicao.Text = "Salvar Edição";
-            this.btnSalvarEdicao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSalvarEdicao.UseVisualStyleBackColor = true;
-            // 
             // btnExcluir
             // 
             this.btnExcluir.Enabled = false;
-            this.btnExcluir.Location = new System.Drawing.Point(578, 135);
+            this.btnExcluir.Location = new System.Drawing.Point(579, 106);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(187, 23);
             this.btnExcluir.TabIndex = 5;
@@ -98,7 +86,6 @@ namespace ProjetoFinal.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 393);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnSalvarEdicao);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -116,7 +103,6 @@ namespace ProjetoFinal.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnSalvarEdicao;
         private System.Windows.Forms.Button btnExcluir;
     }
 }
