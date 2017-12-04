@@ -33,7 +33,7 @@ namespace ProjetoFinal.View
 
         }
 
-        private void locaçãoDevoluçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void locaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Locacoes locacao = new Locacoes();
             locacao.Show();
