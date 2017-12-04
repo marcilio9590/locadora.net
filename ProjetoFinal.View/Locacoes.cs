@@ -125,5 +125,32 @@ namespace ProjetoFinal.View
                 }
             }
         }
+
+        private void linhaSelecionada(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if(this.dataGridView1.SelectedRows.Count != 0)
+            {
+                this.btnExcluir.Enabled = true;
+            }
+        }
+
+        private void excluirLocacao(object sender, EventArgs e)
+        {
+            List<String> lista = new List<string>(0);
+            foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
+            {
+                lista.Add(row.Cells[0].Value.ToString());
+            }
+            try
+            {
+                this.locasaoService.excluirLocacao(lista);
+                MessageBox.Show("Locação excluida");
+                refreshGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

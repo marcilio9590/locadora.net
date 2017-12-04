@@ -58,6 +58,7 @@ namespace ProjetoFinal.View
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cell_click);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.updateValueGridView);
+            this.dataGridView1.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.linhaSelecionada);
             // 
             // button1
             // 
@@ -89,6 +90,7 @@ namespace ProjetoFinal.View
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.excluirLocacao);
             // 
             // Locacoes
             // 

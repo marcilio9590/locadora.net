@@ -184,5 +184,51 @@ namespace ProjetoFinal.Dados
             }
 
         }
+
+        public void excluirLocacao(List<String> lista)
+        {
+            con = ManageConnection.GetInstance().GetConection();
+            con.Open();
+
+            MySqlTransaction myTrans;
+            myTrans = con.BeginTransaction(IsolationLevel.ReadCommitted);
+
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.Transaction = myTrans;
+
+            try
+            {
+
+                foreach (String codigo in lista)
+                {
+                    cmd.CommandText = "UPDATE filmes AS a INNER JOIN itens_locacao AS b ON a.cod_filme = b.cod_filme SET a.status = 1 WHERE  b.cod_locacao = ?codigo";
+                    cmd.Parameters.AddWithValue("?codigo", codigo);
+                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = "DELETE FROM itens_locacao WHERE cod_locacao = ?codigo2";
+                    cmd.Parameters.AddWithValue("?codigo2", codigo);
+                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = "DELETE FROM locacoes WHERE cod_locacao = ?codigo3";
+                    cmd.Parameters.AddWithValue("?codigo3", codigo);
+                    cmd.ExecuteNonQuery();
+                    myTrans.Commit();
+                    cmd.Dispose();
+
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                myTrans.Rollback();
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
     }
 }

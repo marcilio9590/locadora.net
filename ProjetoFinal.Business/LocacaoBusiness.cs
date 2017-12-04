@@ -64,5 +64,19 @@ namespace ProjetoFinal.Business
                 throw e;
             }
         }
+
+        public void excluirLocacao(List<String> lista)
+        {
+            LocacaoDados objID = new LocacaoDados();
+            try
+            {
+                objID.excluirLocacao(lista);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }
