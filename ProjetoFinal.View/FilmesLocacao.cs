@@ -17,6 +17,8 @@ namespace ProjetoFinal.View
 
         LocacaoBusiness locacaoBusiness = new LocacaoBusiness();
 
+        FilmesBusiness filmesBusiness = new FilmesBusiness();
+
         Locacoes locacaoView;
 
 
@@ -110,6 +112,58 @@ namespace ProjetoFinal.View
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private void adicionarFilme(object sender, EventArgs e)
+        {
+            List<Entidades.Filmes> lista = new List<Entidades.Filmes>(0);
+            Entidades.Filmes f = new Entidades.Filmes();
+            f.codigo = this.tbCodigoFilme.Text;
+            lista.Add(f);
+            long codigo = long.Parse(this.codigoLocacao);
+            try
+            {
+                Entidades.Filmes filme = this.filmesBusiness.buscarFilme(this.tbCodigoFilme.Text);
+                if(filme != null)
+                {
+                    if (filme.status == "Disponível")
+                    {
+                        if (verificarSeFilmeJaExiste(filme))
+                        {
+                            MessageBox.Show("Filmes já consta na locação");
+                        }
+                        else
+                        {
+                            this.locacaoBusiness.inserirFilmesLocacao(codigo,lista);
+                            this.locacaoBusiness.atualizarTotal(this.codigoLocacao, codigo.ToString());
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Este Filme já encontra-se alugado.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Código inválido.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private bool verificarSeFilmeJaExiste(Entidades.Filmes f)
+        {
+            bool retorno = false;
+            foreach (DataGridViewRow row in this.dataGridView2.Rows)
+            {
+                if (row.Cells[2].Value != null && f.codigo.Equals(row.Cells[2].Value.ToString())){
+                    retorno = true;
+                }
+            }
+            return retorno;
         }
     }
 }

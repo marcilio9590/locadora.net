@@ -78,5 +78,31 @@ namespace ProjetoFinal.Business
             }
         }
 
+        public void inserirFilmesLocacao(long id, List<Filmes> lista)
+        {
+            LocacaoDados objID = new LocacaoDados();
+            try
+            {
+                objID.inserirFilmesLocacao(id,lista);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public void atualizarTotal(String codLocacao, String codFilme)
+        {
+            LocacaoDados objID = new LocacaoDados();
+            try
+            {
+                objID.atualizarTotal(codLocacao, codFilme);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        
     }
 }

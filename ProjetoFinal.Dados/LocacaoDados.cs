@@ -42,7 +42,7 @@ namespace ProjetoFinal.Dados
             }
         }
 
-        private void inserirFilmesLocacao(long id, List<Filmes> filmes)
+        public void inserirFilmesLocacao(long id, List<Filmes> filmes)
         {
             con = ManageConnection.GetInstance().GetConection();
             MySqlCommand cmd = null;
@@ -231,5 +231,23 @@ namespace ProjetoFinal.Dados
 
         }
 
+        public void atualizarTotal(String codigoLocacao, String codigoFilme)
+        {
+            con = ManageConnection.GetInstance().GetConection();
+            con.Open();
+            MySqlCommand cmd = null;
+            try
+            {
+                String query = "UPDATE locacoes l inner join filmes f on ?codigoFilme = f.cod_filme set l.total = l.total + f.preco where l.cod_locacao = ?codigoLocacao";
+                cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("?codigoLocacao", codigoLocacao);
+                cmd.Parameters.AddWithValue("?codigoFilme", codigoFilme);
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 }

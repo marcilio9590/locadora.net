@@ -32,7 +32,7 @@
             this.tituloPagina = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbCodigoFilme = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,12 +66,12 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Código do Filme";
             // 
-            // textBox1
+            // tbCodigoFilme
             // 
-            this.textBox1.Location = new System.Drawing.Point(578, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 6;
+            this.tbCodigoFilme.Location = new System.Drawing.Point(578, 103);
+            this.tbCodigoFilme.Name = "tbCodigoFilme";
+            this.tbCodigoFilme.Size = new System.Drawing.Size(157, 20);
+            this.tbCodigoFilme.TabIndex = 6;
             // 
             // pictureBox3
             // 
@@ -82,6 +82,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.adicionarFilme);
             // 
             // FilmesLocacao
             // 
@@ -89,7 +90,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 393);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbCodigoFilme);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.tituloPagina);
@@ -108,7 +109,7 @@
         private System.Windows.Forms.Label tituloPagina;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbCodigoFilme;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
