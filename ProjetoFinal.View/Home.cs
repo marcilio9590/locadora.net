@@ -38,5 +38,11 @@ namespace ProjetoFinal.View
             Locacoes locacao = new Locacoes();
             locacao.Show();
         }
+
+        private void devoluçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Devolucao devolucao = new Devolucao();
+            devolucao.Show();
+        }
     }
 }

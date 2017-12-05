@@ -36,7 +36,7 @@ namespace ProjetoFinal.View
 
         public void refreshGrid()
         {
-            this.dataGridView1.DataSource = locasaoService.GetItens();
+            this.dataGridView1.DataSource = locasaoService.GetItens(false);
             ajustarGrid();
             percorrerResultadoGridView();
         }

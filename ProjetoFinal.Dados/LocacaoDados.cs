@@ -100,10 +100,18 @@ namespace ProjetoFinal.Dados
             }
         }
 
-        public DataTable Consultar()
+        public DataTable Consultar(Boolean flag)
         {
             con = ManageConnection.GetInstance().GetConection();
-            String query = "Select l.cod_locacao, c.cod_cliente, c.nome, l.data,l.status,l.total from locacoes l inner join clientes c on  l.cod_cliente = c.cod_cliente;";
+            String query = "";
+            if (flag)
+            {
+                query = "Select l.cod_locacao, c.cod_cliente, c.nome, l.data,l.status,l.total from locacoes l inner join clientes c on  l.cod_cliente = c.cod_cliente WHERE l.status = 0";
+            }
+            else
+            {
+                query = "Select l.cod_locacao, c.cod_cliente, c.nome, l.data,l.status,l.total from locacoes l inner join clientes c on  l.cod_cliente = c.cod_cliente;";
+            }
 
             try
             {
@@ -249,5 +257,48 @@ namespace ProjetoFinal.Dados
                 con.Close();
             }
         }
+
+        public void realizarDevolucao(List<String> lista)
+        {
+            con = ManageConnection.GetInstance().GetConection();
+            con.Open();
+
+            MySqlTransaction myTrans;
+            myTrans = con.BeginTransaction(IsolationLevel.ReadCommitted);
+
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.Transaction = myTrans;
+
+            try
+            {
+
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    String codigo = lista[i];
+                    cmd.CommandText = "UPDATE locacoes SET  status = 1 WHERE cod_locacao = ?codigo";
+                    cmd.Parameters.AddWithValue("?codigo", codigo);
+                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = "UPDATE filmes f INNER JOIN itens_locacao il on f.cod_filme = il.cod_filme " +
+                        "set f.status = 1 where il.cod_locacao = ?codigo2";
+                    cmd.Parameters.AddWithValue("?codigo2", codigo);
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                }
+                myTrans.Commit();
+                cmd.Dispose();
+            }
+            catch (Exception e)
+            {
+                myTrans.Rollback();
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
     }
 }

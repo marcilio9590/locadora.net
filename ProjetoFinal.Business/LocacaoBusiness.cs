@@ -12,11 +12,11 @@ namespace ProjetoFinal.Business
     public class LocacaoBusiness
     {
 
-        public DataTable GetItens()
+        public DataTable GetItens(Boolean flag)
         {
             LocacaoDados objID = new LocacaoDados();
 
-            return objID.Consultar();
+            return objID.Consultar(flag);
         }
 
         public void SetItem(Locacao item)
@@ -103,6 +103,19 @@ namespace ProjetoFinal.Business
                 throw e;
             }
         }
-        
+
+        public void realizarDevolucao(List<String> lista)
+        {
+            LocacaoDados objID = new LocacaoDados();
+            try
+            {
+                objID.realizarDevolucao(lista);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }
